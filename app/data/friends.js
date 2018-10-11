@@ -65,13 +65,22 @@ var friends = [
         },
 ]
 
-for (i=0; i < friends.length; i++) {
+
+
+/* for (var i=0; i < friends.length; i++) {
         let friendOne = friends[i].scores;        
         let totals = [];
         let oneTotal = friendOne.reduce(function(a, b) { return a + b; }, 0);
         totals.push(oneTotal);
         console.log(friends[i].name + " total points: " + totals);
-};
+}; */
+
+Array.prototype.diff = function(a) {
+        return this.filter(function(i) {return a.indexOf(i) < 0;});
+    };
+    for(var i = 0; friends.length; i++) {
+            friends[i].diff(friends[i+1]);
+    };
          /* let compareFriends = (char) => {
                 let difference = [];
                 difference = Math.abs(totals[i]-char);
