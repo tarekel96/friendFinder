@@ -65,7 +65,14 @@ var friends = [
         },
 ]
 
-
+let result = [];
+for (let i = 0; i < friends.length; i++) {
+        let subtractArr = (arr1, arr2) => {
+                let resultArr = Math.absolute(arr1[i] - arr2[i]);
+                let result = resultArr.reduce((a, b) => a + b, 0);
+        }
+        subtractArr(friends[0],friends[1]);
+}
 
 /* for (var i=0; i < friends.length; i++) {
         let friendOne = friends[i].scores;        
@@ -75,12 +82,12 @@ var friends = [
         console.log(friends[i].name + " total points: " + totals);
 }; */
 
-Array.prototype.diff = function(a) {
+/* Array.prototype.diff = function(a) {
         return this.filter(function(i) {return a.indexOf(i) < 0;});
     };
     for(var i = 0; friends.length; i++) {
             friends[i].diff(friends[i+1]);
-    };
+    }; */
          /* let compareFriends = (char) => {
                 let difference = [];
                 difference = Math.abs(totals[i]-char);
