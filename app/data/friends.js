@@ -68,9 +68,11 @@ var friends = [
 let result = [];
 for (let i = 0; i < friends.length; i++) {
         let subtractArr = (arr1, arr2) => {
-                let resultArr = Math.absolute(arr1[i] - arr2[i]);
-                let result = resultArr.reduce((a, b) => a + b, 0);
-        }
+                let resultArr = arr1[i] - arr2[i];
+                console.log(resultArr);
+                var sum = resultArr.reduce(function(a, b) { return a + b; }, 0);
+                console.log(sum);
+         }
         subtractArr(friends[0],friends[1]);
 }
 
